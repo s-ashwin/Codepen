@@ -31,9 +31,10 @@ code {
   justify-content: space-between;
   color: #DAE0E2;
   background-color: hsl(200, 19%, 10%);
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 0.75rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  cursor: pointer;
 }
 .CodeMirror{
   height: 100% !important;
@@ -44,6 +45,13 @@ code {
   border-bottom-right-radius: 0.5rem;
   overflow: hidden;
 }
-iframe{
-  margin: 0 !important;
+.btn{
+  background: none;
+  outline: none;
+  border: none;
+  color: #DAE0E2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

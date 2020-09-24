@@ -5,6 +5,7 @@ import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
 import {Controlled} from "react-codemirror2"
+import { CgExpand } from "react-icons/cg";
 
 export default function Editor({title,lang,onChange,value}) {
 
@@ -17,7 +18,7 @@ export default function Editor({title,lang,onChange,value}) {
 
             <div className="title">
                 {title}
-                <button>O</button>
+                <button type="button" className="btn"><CgExpand size={16}></CgExpand></button>
             </div>
 
             <Controlled onBeforeChange={handlechange}
