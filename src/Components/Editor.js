@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/material.css";
+import "codemirror/theme/base16-dark.css";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
@@ -30,7 +30,7 @@ export default function Editor({title,lang,onChange,value}) {
                 lineWrapping: true,
                 lint: true,
                 mode: lang,
-                theme: "material",
+                theme: "base16-dark",
                 lineNumbers: true
                 }}></Controlled>
         </div>
