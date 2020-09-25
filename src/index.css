@@ -26,6 +26,13 @@ code {
   flex-direction: column;
   padding: 1rem;
 }
+.editors-container.closed{
+  flex-grow: 0;
+}
+.editors-container.closed .CodeMirror-scroll{
+  position: absolute;
+  overflow: hidden !important;
+}
 .title{
   display: flex;
   justify-content: space-between;
@@ -54,4 +61,8 @@ code {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+iframe{
+  margin: none;
+  border: none;
 }

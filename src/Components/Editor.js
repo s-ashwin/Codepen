@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/xml/xml";
@@ -9,16 +9,18 @@ import { CgExpand } from "react-icons/cg";
 
 export default function Editor({title,lang,onChange,value}) {
 
+    const[open,setOpen] = useState(true);
+
     function handlechange(editor,data,value){
         onChange(value)
     }
 
     return (
-        <div className="editors-container">
+        <div className={`editors-container ${open? '' : 'closed'}`}>
 
             <div className="title">
                 {title}
-                <button type="button" className="btn"><CgExpand size={16}></CgExpand></button>
+                <button type="button" onClick={()=> setOpen(!open)} className="btn"><CgExpand size={16}></CgExpand></button>
             </div>
 
             <Controlled onBeforeChange={handlechange}
