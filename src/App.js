@@ -7,6 +7,14 @@ function App() {
   const[css,setCss]=useState("");
   const[js,setJs]=useState("");
 
+  const srcDoc = `
+                <html>
+                  <body>${html}</body>
+                  <style>${css}</style>
+                  <script>${js}</script>
+                </html>
+                `
+
   return (
     <div className="App">
       <div className= "panel top" >
@@ -17,6 +25,7 @@ function App() {
 
       <div className= "panel bottom" >
         <iframe 
+          srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
           width="100%"
