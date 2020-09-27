@@ -11,9 +11,7 @@ export default function Editor({title,lang,onChange,value}) {
 
     const[open,setOpen] = useState(true);
 
-    function handlechange(editor,data,value){
-        onChange(value)
-    }
+    const handlechange = (editor,data,value)=>onChange(value)
 
     return (
         <div className={`editors-container ${open? '' : 'closed'}`}>
