@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Editor from './Components/Editor';
 
 function App() {
@@ -14,6 +14,23 @@ function App() {
                   <script>${js}</script>
                 </html>
                 `
+
+  useEffect(()=>{
+    const htmlLocal = localStorage.getItem("codepen-html")
+    const cssLocal = localStorage.getItem("codepen-css")
+    const jsLocal = localStorage.getItem("codepen-js")
+
+    setHtml(JSON.parse(htmlLocal))
+    setCss(JSON.parse(cssLocal))
+    setJs(JSON.parse(jsLocal))
+
+    }, [])
+
+  useEffect(()=>{
+      localStorage.setItem("codepen-html", JSON.stringify(html));
+      localStorage.setItem("codepen-css", JSON.stringify(css));
+      localStorage.setItem("codepen-js", JSON.stringify(js));
+    },[html,css,js])
 
   return (
     <div className="App">
