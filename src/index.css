@@ -70,3 +70,9 @@ iframe{
   margin: none;
   border: none;
 }
+@media only screen and (max-width: 600px) {
+  .panel {
+    flex-direction: column;
+    overflow: auto;
+  }
+}
